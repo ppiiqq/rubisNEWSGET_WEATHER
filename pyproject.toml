@@ -1,0 +1,23 @@
+[project]
+name = "newsget"
+version = "0.1.0"
+description = "Multi-agent news lead pipeline"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+  "requests>=2.32",
+  "pydantic>=2.6",
+  "pytest>=8.0"
+]
+
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
